@@ -1,22 +1,34 @@
-# APP-RECTIFICADORA
-# Sistema de Gestión para Taller y Rectificadora de Motores ⚙️
+# Sistema de Gestión para Taller y Rectificadora de Motores ⚙️ (APP-RECTIFICADORA)
 
-## Descripción del Proyecto
+## Descripción
 Esta es una aplicación desarrollada en Python diseñada para optimizar y administrar el flujo de trabajo de un taller mecánico y rectificadora de motores. El sistema permite llevar un control ordenado de la entrada y salida de trabajos, gestionar la información de los clientes, y administrar el stock de repuestos y presupuestos en un solo lugar.
 
-## Características Principales (Roadmap)
-El proyecto se construirá de forma modular y contempla las siguientes funcionalidades:
+## Objetivos SMART
+*   **Específico y Medible:** Desarrollar e implementar el módulo principal de registro de clientes y órdenes de trabajo (CRUD completo) utilizando SQLite.
+*   **Alcanzable y Relevante:** Eliminar el uso de papel en el registro de motores ingresados, centralizando la información en una base de datos local.
+*   **Tiempo:** Tener un Prototipo Mínimo Viable (MVP) funcional por consola en un plazo de 4 semanas.
 
+## Límites del Proyecto
+En esta fase inicial, el proyecto **NO** incluirá:
+- Una Interfaz Gráfica de Usuario (GUI) o entorno web (se operará inicialmente a través de un menú de consola).
+- Conexión a bases de datos en la nube (todo será local).
+- Facturación fiscal electrónica ni conexión con entidades gubernamentales/bancarias.
+
+## Tecnologías utilizadas
+Para el desarrollo de este proyecto se utilizarán:
+- Python 3.14.2
+- SQLite (mediante la librería `sqlite3`)
+- Vibe Coding (Desarrollo asistido por IA)
+
+---
+
+## Características Principales (Roadmap Futuro)
+El proyecto se construirá de forma modular y contempla las siguientes funcionalidades:
 - **Gestión de Clientes:** Registro de datos, historial de trabajos y contacto.
 - **Registro de Motores y Trabajos:** Seguimiento de piezas ingresadas (tapas de cilindro, cigüeñales, blocks, etc.), números de motor, marca y modelo.
 - **Órdenes de Trabajo (Workflows):** Control de estado de las tareas (En espera, En máquina, En banco de armado, Terminado).
 - **Inventario de Repuestos:** Control de stock (ej. metales, válvulas, aceite, etc.), ingresos y egresos, alertas de stock bajo.
 - **Presupuestos:** Generación de cotizaciones combinando costo de mecanizado/mano de obra y lista de repuestos requeridos.
-
-## Tecnologías Utilizadas
-- **Lenguaje:** Python 3.14.2
-- **Base de Datos:** SQLite (mediante la librería `sqlite3` para un almacenamiento local ligero y eficiente).
-- **Arquitectura:** Separación de responsabilidades (Datos, Lógica de Negocio e Interfaz).
 
 ## Estructura del Proyecto (Propuesta inicial)
 ```text

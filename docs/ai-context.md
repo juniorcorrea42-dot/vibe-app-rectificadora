@@ -1,0 +1,1 @@
+"El estilo visual de este proyecto debe ser minimalista y moderno. Utilizaremos una paleta de colores pasteles (azules y rojos suaves). El tono de la comunicación en la interfaz será profesional pero amigable. La interfaz debe priorizar la facilidad de uso."
