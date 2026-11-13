@@ -11,7 +11,8 @@ formIngreso.addEventListener('submit', function(evento) {
     // Capturamos los valores de los inputs
     const cliente = document.getElementById('cliente').value;
     const motor = document.getElementById('motor').value;
-    const sector = document.getElementById('sector').value;
+    const trabajo = document.getElementById('trabajo').value;
+    const presupuesto = document.getElementById('presupuesto').value;
 
     // Creamos una nueva fila para la tabla
     const nuevaFila = document.createElement('tr');
@@ -20,7 +21,8 @@ formIngreso.addEventListener('submit', function(evento) {
         <td>#00${contadorId}</td>
         <td><strong>${cliente}</strong></td>
         <td>${motor}</td>
-        <td>${sector}</td>
+        <td>${trabajo}</td>
+        <td>$${parseFloat(presupuesto).toFixed(2)}</td>
         <td><span class="badge">En Proceso</span></td>
     `;
 
