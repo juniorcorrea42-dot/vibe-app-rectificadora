@@ -46,3 +46,26 @@ APP-RECTIFICADORA/
 │
 └── docs/                    # Documentación de planificación
     └── alcance.md           # Definición de alcance y MVP
+
+    ## 🔄 Bitácora de Iteración y Pruebas con IA (Vibe Coding)
+
+Durante el desarrollo del MVP para la rectificadora, el código generado por la IA fue sometido a pruebas locales en navegador, dando lugar a las siguientes iteraciones correctivas:
+
+### Iteración 1: Alineación de estructura modular y rutas de archivos
+* **Prompt Inicial:** Solicitud de generación de estructura base (`index.html`, hoja de estilos y lógica JS) para el tablero de órdenes de trabajo de los sectores del taller (Lavadero con Lucas/Nico, Cilindros con Máximo, Armado con Álvaro y Administración con Tomás).
+* **Prueba y Problema Detectado:** Al organizar el repositorio en carpetas modulares (`css/styles.css`) y probar en el navegador, los estilos y la captura del formulario fallaban debido a discrepancias entre los nombres/rutas generados por defecto (`style.css` vs `styles.css` y ubicación de `script.js`). Además, el `README.md` inicial mencionaba una app de consola, contradiciendo la nueva interfaz web.
+* **Ajuste Realizado:** Se auditaron las etiquetas `<link>` y `<script>` en `index.html` para apuntar a las rutas reales del árbol del proyecto y se actualizó la documentación de alcance a una arquitectura Frontend Web.
+
+### Iteración 2: Persistencia de datos en el navegador (`localStorage`)
+* **Prompt Inicial:** Generación del evento `submit` en `script.js` para capturar los datos del motor e insertarlos en la tabla del DOM.
+* **Prueba y Problema Detectado:** Al probar la carga de órdenes en Chrome, los registros inicialmente no se guardaban o desaparecían por completo al recargar la página (`F5`), ya que el primer script de la IA solo manipulaba el DOM en memoria volátil sin almacenamiento.
+* **Prompt de Ajuste:** *"A la hora de probar la aplicación no se guardan los nuevos registros"*.
+* **Solución Técnica:** Se refactorizó `script.js` incorporando `localStorage.getItem` y `localStorage.setItem` con serialización JSON (`ordenes_taller`), logrando que las órdenes ingresadas persistan al cerrar o refrescar el navegador, y calculando el `contadorId` de forma dinámica según el último registro guardado.
+
+### Iteración 3: Usabilidad (UX) y visibilidad de encabezados en la tabla
+* **Prueba y Problema Detectado:** Con la persistencia funcionando, al insertar múltiples órdenes de motores en la tabla, los datos aparecían apilados sin referencia visual clara de qué representaba cada columna.
+* **Prompt de Ajuste:** *"Ahora sí se agregan los registros pero no sé qué columna representa qué dato"*.
+* **Solución Técnica:** 
+  1. Se verificó la estructura semántica de `<thead>` en `index.html` con las 5 columnas clave (`ID Orden`, `Cliente`, `Motor / Vehículo`, `Sector Asignado`, `Estado Actual`).
+  2. Se ajustó la regla `th` en `css/styles.css` aplicando un fondo de alto contraste (`#2d3748`) con tipografía blanca en mayúsculas.
+  3. Se enriqueció el renderizado en `script.js` con formato visual e íconos por celda para facilitar la lectura rápida en el taller.
