@@ -18,35 +18,22 @@ Tablero de Estados (Workflow): Seguimiento visual del estado del trabajo ("En es
 Generador de Presupuestos: Creación de planillas de cotización claras que sumen los costos de mecanizado y los repuestos (metales, válvulas, juntas) para entregar al cliente.
 
 Flujo básico del usuario:
-
 El usuario (administrador) registra al cliente en el sistema.
-
 Se crea una nueva "Orden de Trabajo" detallando qué piezas del motor ingresaron.
-
 Se genera un presupuesto estimado combinando repuestos y mano de obra de mecanizado.
-
 A medida que el motor avanza en el taller, el usuario actualiza su estado hasta marcarlo como "Terminado" para la entrega.
 
 3. Límites y Fuera de Alcance
 Para mantener el desarrollo acotado y manejable en esta fase inicial con IA, la versión no abarcará:
-
 Conexión con sistemas de facturación electrónica fiscal (AFIP).
-
 Despliegue en servidores en la nube complejos (la base de datos operará de manera local).
-
 Una aplicación móvil nativa para que los clientes consulten el estado desde sus casas (el sistema será de uso 100% interno para el personal del taller).
-
 Gestión avanzada de sueldos o contabilidad general de la empresa.
 
 4. Stack Técnico Inicial
 Estructura y Contenido (Frontend): HTML (para definir los formularios de ingreso, tablas de repuestos y órdenes).
-
 Diseño y Estilos (Frontend): CSS (para dar un aspecto visual profesional, ordenado y moderno al panel de administración).
-
 Interactividad (Frontend): JavaScript (para validaciones de campos de texto, alertas y menús dinámicos).
-
 Lógica de Negocio y Backend: Python (para procesar los datos de las cotizaciones y el inventario).
-
 Base de Datos: SQLite (para almacenar los clientes, órdenes y piezas de forma local, ligera y sin configuraciones complejas).
-
 Herramientas de IA: Vibe Coding para la generación asistida de la interfaz y la lógica.

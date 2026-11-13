@@ -16,10 +16,7 @@ En esta fase inicial, el proyecto **NO** incluirá:
 
 ## Tecnologías utilizadas
 Para el desarrollo de este proyecto se utilizarán:
-- Python 3.14.2
-- SQLite (mediante la librería `sqlite3`)
-- Vibe Coding (Desarrollo asistido por IA)
-
+- Python 3.14.2, HTML, CSS, JS y Vibe Coding
 ---
 
 ## Características Principales (Roadmap Futuro)

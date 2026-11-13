@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto Vibe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Órdenes y Presupuestos</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Proyecto Inicializado</h1>
+
+  <!-- Encabezado general -->
+  <header>
+    <h1>Seguimiento de Órdenes y Trabajos</h1>
+  </header>
+
+  <!-- Contenedor principal de la aplicación -->
+  <main>
+
+    <!-- Sección modular para la carga de datos -->
+    <section class="modulo-formulario">
+      <h2>Ingresar Nueva Orden</h2>
+      
+      <!-- Formulario con el ID exacto que busca el JS -->
+      <form id="form-ingreso">
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required>
+
+        <label for="trabajo">Descripción del trabajo:</label>
+        <input type="text" id="trabajo" name="trabajo" required>
+
+        <label for="presupuesto">Presupuesto ($):</label>
+        <input type="number" id="presupuesto" name="presupuesto" step="0.01" required>
+
+        <button type="submit">Guardar orden</button>
+      </form>
+    </section>
+
+    <!-- Sección modular para la visualización del listado -->
+    <section class="modulo-listado">
+      <h2>Órdenes Registradas</h2>
+
+      <!-- Tabla con el ID exacto requerido -->
+      <table id="lista-ordenes">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Trabajo</th>
+            <th>Presupuesto</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Acá es donde tu JavaScript inyectará las filas de las órdenes -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Enlace a tu script al final del body -->
+  <script src="js/main.js"></script>
 </body>
 </html>
