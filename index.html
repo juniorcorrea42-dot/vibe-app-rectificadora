@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Órdenes y Presupuestos</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Órdenes y Presupuestos | APP-RECTIFICADORA</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Encabezado general -->
-  <header>
-    <h1>Seguimiento de Órdenes y Trabajos</h1>
-  </header>
+    <header class="topbar">
+        <h1>⚙️ Seguimiento de Órdenes y Trabajos - Rectificadora</h1>
+    </header>
 
-  <!-- Contenedor principal de la aplicación -->
-  <main class="container">
-  
-  <section class="modulo-formulario">
-    <h2>Ingresar Orden</h2>
-    <form id="form-ingreso">
-      
-      <!-- Cada campo envuelto en su form-group -->
-      <div class="form-group">
-        <label for="cliente">Cliente:</label>
-        <input type="text" id="cliente" name="cliente" required>
-      
-      <div class="form-group">
-        <label for="motor">Equipo / Motor:</label>
-        <input type="text" id="motor" name="motor" required>
-      </div>
+    <main class="container">
+        <!-- Módulo de Formulario -->
+        <section class="modulo-formulario">
+            <h2>Ingresar Orden</h2>
+            <form id="form-ingreso">
+                <div class="form-group">
+                    <label for="cliente">Cliente:</label>
+                    <input type="text" id="cliente" name="cliente" required placeholder="Ej: Transporte Gómez">
+                </div>
 
-      <div class="form-group">
-        <label for="trabajo">Sector / Área:</label>
-        <input type="text" id="trabajo" name="trabajo" required>
-      </div>
+                <div class="form-group">
+                    <label for="motor">Equipo / Motor:</label>
+                    <input type="text" id="motor" name="motor" required placeholder="Ej: Toyota Hilux 3.0 D4-D">
+                </div>
 
-      <div class="form-group">
-        <label for="presupuesto">Presupuesto ($):</label>
-        <input type="number" id="presupuesto" name="presupuesto" step="0.01" required>
-      </div>
+                <div class="form-group">
+                    <label for="trabajo">Sector / Área:</label>
+                    <input type="text" id="trabajo" name="trabajo" required placeholder="Ej: Lavadero (Lucas/Nico) / Cilindros (Máximo)">
+                </div>
 
-      <!-- Botón con la clase btn-primary -->
-      <button type="submit" class="btn-primary">Guardar orden</button>
-    </form>
-  </section>
+                <div class="form-group">
+                    <label for="presupuesto">Presupuesto ($):</label>
+                    <input type="number" id="presupuesto" name="presupuesto" step="0.01" min="0" required placeholder="Ej: 185000.00">
+                </div>
 
-  <section class="modulo-listado">
-    <h2>Órdenes Registradas</h2>
-    <table id="lista-ordenes">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Cliente</th>
-          <th>Equipo / Motor</th>
-          <th>Sector / Área</th>
-          <th>Presupuesto ($)</th>
-        </tr>
-      <!-- Encabezado y cuerpo de la tabla -->
-    </table>
-  </section>
+                <button type="submit" class="btn-primary">Guardar orden</button>
+            </form>
+        </section>
 
-</main>
+        <!-- Módulo de Listado -->
+        <section class="modulo-listado">
+            <h2>Órdenes Registradas</h2>
+            <div class="table-container">
+                <table id="tabla-ordenes">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Equipo / Motor</th>
+                            <th>Sector / Área</th>
+                            <th>Presupuesto ($)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-ordenes">
+                        <!-- Aquí se insertarán las filas dinámicamente sin borrar el thead -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
-
-  <!-- Enlace a tu script al final del body -->
-  <script src="js/script.js"></script>
+    <!-- Enlace al script en la raíz del proyecto -->
+    <script src="js/script.js"></script>
 </body>
 </html>
-
